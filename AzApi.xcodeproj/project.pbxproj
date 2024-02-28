@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27082A462B8F031E0040B42E /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27082A452B8F031E0040B42E /* FlightResponse.swift */; };
 		279AEBC22B8E7B370027EBF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279AEBC12B8E7B370027EBF2 /* AppDelegate.swift */; };
 		279AEBC42B8E7B370027EBF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279AEBC32B8E7B370027EBF2 /* SceneDelegate.swift */; };
 		279AEBC62B8E7B370027EBF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279AEBC52B8E7B370027EBF2 /* ViewController.swift */; };
 		279AEBC92B8E7B370027EBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279AEBC72B8E7B370027EBF2 /* Main.storyboard */; };
 		279AEBCB2B8E7B380027EBF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279AEBCA2B8E7B380027EBF2 /* Assets.xcassets */; };
 		279AEBCE2B8E7B380027EBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279AEBCC2B8E7B380027EBF2 /* LaunchScreen.storyboard */; };
+		279AEBD72B8E7B7B0027EBF2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279AEBD62B8E7B7A0027EBF2 /* NetworkManager.swift */; };
+		279AEBD92B8E7CB00027EBF2 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279AEBD82B8E7CB00027EBF2 /* NetworkUtil.swift */; };
+		279AEBDB2B8E95A00027EBF2 /* FlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279AEBDA2B8E95A00027EBF2 /* FlightViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27082A452B8F031E0040B42E /* FlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResponse.swift; sourceTree = "<group>"; };
 		279AEBBE2B8E7B370027EBF2 /* AzApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279AEBC12B8E7B370027EBF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279AEBC32B8E7B370027EBF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		279AEBCA2B8E7B380027EBF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279AEBCD2B8E7B380027EBF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		279AEBCF2B8E7B380027EBF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		279AEBD62B8E7B7A0027EBF2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		279AEBD82B8E7CB00027EBF2 /* NetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
+		279AEBDA2B8E95A00027EBF2 /* FlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27082A442B8F03010040B42E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				27082A452B8F031E0040B42E /* FlightResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		279AEBB52B8E7B370027EBF2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +72,10 @@
 		279AEBC02B8E7B370027EBF2 /* AzApi */ = {
 			isa = PBXGroup;
 			children = (
+				27082A442B8F03010040B42E /* model */,
+				279AEBD52B8E7B510027EBF2 /* network */,
 				279AEBC12B8E7B370027EBF2 /* AppDelegate.swift */,
+				279AEBDA2B8E95A00027EBF2 /* FlightViewModel.swift */,
 				279AEBC32B8E7B370027EBF2 /* SceneDelegate.swift */,
 				279AEBC52B8E7B370027EBF2 /* ViewController.swift */,
 				279AEBC72B8E7B370027EBF2 /* Main.storyboard */,
@@ -65,6 +84,15 @@
 				279AEBCF2B8E7B380027EBF2 /* Info.plist */,
 			);
 			path = AzApi;
+			sourceTree = "<group>";
+		};
+		279AEBD52B8E7B510027EBF2 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				279AEBD62B8E7B7A0027EBF2 /* NetworkManager.swift */,
+				279AEBD82B8E7CB00027EBF2 /* NetworkUtil.swift */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279AEBDB2B8E95A00027EBF2 /* FlightViewModel.swift in Sources */,
+				27082A462B8F031E0040B42E /* FlightResponse.swift in Sources */,
+				279AEBD92B8E7CB00027EBF2 /* NetworkUtil.swift in Sources */,
+				279AEBD72B8E7B7B0027EBF2 /* NetworkManager.swift in Sources */,
 				279AEBC62B8E7B370027EBF2 /* ViewController.swift in Sources */,
 				279AEBC22B8E7B370027EBF2 /* AppDelegate.swift in Sources */,
 				279AEBC42B8E7B370027EBF2 /* SceneDelegate.swift in Sources */,
